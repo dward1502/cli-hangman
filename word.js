@@ -18,7 +18,7 @@ function Word(wrd) {
     };
 
     //found the current word
-    this.didWeFindTheWord = function () {
+    this.checkWord = function () {
         if (this.letters.every(function (lttr) {
             return lttr.appear === true;
         })) {
@@ -41,11 +41,11 @@ function Word(wrd) {
         return whatToReturn;
     };
 
-    this.wordRender = function () {
+    this.wordDisplay = function () {
         var display = '';
         //render the word based on if letters are found or not
         that.letters.forEach(function (lttr) {
-            var currentLetter = lttr.letterRender();
+            var currentLetter = lttr.letterDisplay();
             display += currentLetter;
         });
 

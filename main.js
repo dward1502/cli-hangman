@@ -71,7 +71,7 @@ var hangman = {
             this.currentWord = new Word(this.wordBank[randNum]);
             this.currentWord.getLets();
             //displays current word as blanks.
-            console.log(this.currentWord.wordRender());
+            console.log(this.currentWord.wordDisplay());
             this.keepPromptingUser();
         } else {
             this.resetGuessesRemaining();
@@ -120,21 +120,21 @@ var hangman = {
                     console.log(hangManDisplay[(that.display) - 1]);
 
                     console.log('\n==================================================');
-                    console.log(that.currentWord.wordRender());
+                    console.log(that.currentWord.wordDisplay());
                     console.log('\n==================================================');
 
                     console.log("Letters guessed: " + that.guessedLetters);
                 } else {
                     console.log('\nYes! You guessed right!');
                     //checks to see if user won
-                    if (that.currentWord.didWeFindTheWord() === true) {
-                        console.log(that.currentWord.wordRender());
+                    if (that.currentWord.checkWord() === true) {
+                        console.log(that.currentWord.wordDisplay());
                         console.log('Congratulations! You won the game!!!\n');
                         that.startGame();
                     } else {
                         // display the user how many guesses remaining
                         console.log('Guesses remaining: ' + that.guessesRemaining);
-                        console.log(that.currentWord.wordRender());
+                        console.log(that.currentWord.wordDisplay());
                         console.log('\n================================================');
                         console.log("Letters guessed: " + that.guessedLetters);
                     }
