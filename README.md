@@ -22,9 +22,9 @@ npm is-letter required
 6. When you lose or answer correctly a prompt will pop up asking if you would like to Start game again.
 
 # Technologies used
-NPM
-Node.js
-javascript constructors and object oriented programming
+* NPM
+* Node.js
+* javascript constructors and object oriented programming
 
 # Credits
 
